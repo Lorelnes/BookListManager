@@ -30,7 +30,7 @@ class BookListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        binding.recyclerView.adapter = BookAdapter(sampleBooks)
+        binding.recyclerView.adapter = BookAdapter(sampleBooks) { book ->  }
     }
 
     override fun onDestroyView() {
@@ -38,4 +38,6 @@ class BookListFragment : Fragment() {
         _binding = null
     }
 }
+
+
 
